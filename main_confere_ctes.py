@@ -87,8 +87,8 @@ def gera_dict(pasta):
     return dados_totais,dados_cte
 
 
-# Exemplo de uso
-pasta_ctes = "xml_ctes"
-ctes,ctes_1 = gera_dict(pasta_ctes)
+# # # Exemplo de uso
+# # pasta_ctes = "xml_ctes"
+# # ctes,ctes_1 = gera_dict(pasta_ctes)
 
-verifica_cte(ctes)
+# verifica_cte(ctes)
