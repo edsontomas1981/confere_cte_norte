@@ -4,19 +4,19 @@ def verifica_cte(lista_ctes,dados):
     cte_erros=[]
     for cte in lista_ctes:
         if remetente_igual_destinatario(cte):
-            cte_erros.append((f'{cte["num_cte"]}',(f'Mesmo remetente e destinatário.'),cte['cnpj_dest']))
+            cte_erros.append((f'{cte["num_cte"]}',(f'Remetente e destinatário são iguais.'),cte['cnpj_dest']))
 
         if verificar_cidade(cte['cidade_destino'], dados['filial']):
             cte_erros.append((f'{cte["num_cte"]}',(f'Não está vinculado à filial de carregamento correspondente.'),cte['cidade_destino']))
 
         if verificar_coleta_madeirao(cte):
-            cte_erros.append(((f'{cte["num_cte"]}',(f'Provavelmente possui um valor de coleta no frete. Valor do frete: {cte["frete"]}'),cte["frete"])))
+            cte_erros.append(((f'{cte["num_cte"]}',(f'Cliente Madeirão verificar Ordem de Coleta. Frete: {cte["frete"]}'),cte["frete"])))
 
         if verificar_mo_galvao(cte):
             cte_erros.append(((cte["num_cte"],(f'Verificar m3 cliete M O Galvão.'),cte["m3"])))
 
         if verificar_peso_volumes(cte,dados['peso_maximo']):
-            cte_erros.append((cte["num_cte"],(f'''Peso por volume kg, possivelmente desacordo com o peso real.'''),round(float(cte["peso"])/float(cte["volumes"]),2)))
+            cte_erros.append((cte["num_cte"],(f'''Peso volume acima do máximo.'''),round(float(cte["peso"])/float(cte["volumes"]),2)))
 
         if verificar_frete_abaixo(cte,dados['valor_minimo']):            
             cte_erros.append((cte["num_cte"],(f'Frete por kg abaixo do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))

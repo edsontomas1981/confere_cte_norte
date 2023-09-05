@@ -94,21 +94,21 @@ valor_minimo_label.grid(column=0, row=2, sticky=tk.W)
 
 valor_minimo_entry = ttk.Entry(frame, width=10)
 valor_minimo_entry.grid(column=1, row=2, sticky=(tk.W, tk.E))
-valor_minimo_entry.insert(0, "0.00")
+valor_minimo_entry.insert(0, "0.20")
 
 valor_maximo_label = ttk.Label(frame, text="Valor Máximo por Kg:")
 valor_maximo_label.grid(column=0, row=3, sticky=tk.W)
 
 valor_maximo_entry = ttk.Entry(frame, width=10)
 valor_maximo_entry.grid(column=1, row=3, sticky=(tk.W, tk.E))
-valor_maximo_entry.insert(0, "10.00")
+valor_maximo_entry.insert(0, "3.00")
 
 peso_maximo_label = ttk.Label(frame, text="Peso Máximo por volumes:")
 peso_maximo_label.grid(column=0, row=4, sticky=tk.W)
 
 peso_maximo_entry = ttk.Entry(frame, width=10)
 peso_maximo_entry.grid(column=1, row=4, sticky=(tk.W, tk.E))
-peso_maximo_entry.insert(0, "10.00")
+peso_maximo_entry.insert(0, "80.00")
 
 # Botão para enviar as configurações e processar os dados
 enviar_button = ttk.Button(frame, text="Verificar", command=processar_dados)

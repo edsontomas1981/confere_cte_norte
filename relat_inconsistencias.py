@@ -34,8 +34,10 @@ def imprimir_relatorio(dados):
     styles = getSampleStyleSheet()
     normal_style = styles["Normal"]
     normal_style.alignment = 0  # 0 = left, 1 = center, 2 = right
-    normal_style.fontSize = 14  # Tamanho da fonte (por exemplo, 12)
+    normal_style.fontSize = 12  # Tamanho da fonte (por exemplo, 12)
 
+    # Defina o espaçamento entre as linhas (leading)
+    normal_style.leading = 20  # Altere esse valor para ajustar o espaçamento desejado
 
     h1 = styles['Heading1']
     h1.alignment = 1  # 0 = left, 1 = center, 2 = right
@@ -63,10 +65,10 @@ def imprimir_relatorio(dados):
     story.append(Paragraph("", normal_style))  # Linha em branco
     # Criar um objeto Paragraph com o texto
     story.append(Paragraph(texto_com_quebras, normal_style))
-    linha="--------------------------------------------------------------"
+    
     for dado in dados:
-        story.append(Paragraph(f'{dado[0]}{dado[1]}{dado[2]}', normal_style))
-        story.append(Paragraph(linha, normal_style))
+        story.append(Paragraph(f'Cte : {dado[0]} Descrição : {dado[1]} Valor : {dado[2]}', normal_style))
+        # story.append(Paragraph(linha, normal_style))
 
     # Gerar o PDF
     doc.build(story)

@@ -2,10 +2,27 @@ import tkinter as tk
 from tkinter import ttk
 from comunicacao_interna import imprimir_ci
 import webbrowser
+import sqlite3
 
 def salvar_formulario():
-    # Adicione aqui a lógica para salvar os dados do formulário
-    pass
+    conn = sqlite3.connect('banco_de_dados.db')
+    cursor = conn.cursor()
+    
+    ci_num = ci_num_entry.get()
+    destinatario = destinatario_entry.get()
+    manifesto_numero = manifesto_numero_entry.get()
+    motorista = motorista_entry.get()
+    valor_frete = float(valor_frete_entry.get())
+    percurso = percurso_entry.get()
+    data = data_entry.get()
+    observacao = observacao_text.get("1.0", "end-1c")
+
+    # Inserir os dados na tabela do banco de dados
+    cursor.execute("INSERT INTO sua_tabela (destinatario, manifesto_numero, motorista, valor_frete, percurso, data, observacao) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                   (destinatario, manifesto_numero, motorista, valor_frete, percurso, data, observacao))
+    
+    conn.commit()
+    conn.close()
 
 def excluir_formulario():
     # Adicione aqui a lógica para excluir os dados do formulário
@@ -30,6 +47,25 @@ def imprimir_formulario():
         webbrowser.open(pdf_filename)
     except Exception as e:
         print(f"Erro ao abrir o PDF: {e}")
+
+# Função para preencher o Treeview com os registros do banco de dados
+def preencher_treeview():
+    conn = sqlite3.connect('banco_de_dados.db')
+    cursor = conn.cursor()
+
+    # Execute uma consulta para recuperar todos os registros
+    cursor.execute("SELECT * FROM sua_tabela")
+    registros = cursor.fetchall()
+
+    # Limpe o Treeview antes de preenchê-lo novamente
+    for row in tree.get_children():
+        tree.delete(row)
+
+    # Preencha o Treeview com os registros
+    for registro in registros:
+        tree.insert('', 'end', values=registro)
+
+    conn.close()
 
 # Crie uma janela principal
 root = tk.Tk()
@@ -90,8 +126,35 @@ salvar_button = ttk.Button(formulario_frame, text="Salvar", command=salvar_formu
 salvar_button.grid(row=23, column=1, padx=10, pady=5, sticky="w")
 
 
+
+# Crie um Treeview para listar os registros
+tree = ttk.Treeview(root, columns=("ci_num", "destinatario", "manifesto_numero", "motorista", "valor_frete", "percurso", "data", "observacao"), show="headings")
+tree.heading("ci_num", text="Número da CI")
+tree.column("ci_num", width=80)
+tree.heading("destinatario", text="Destinatário")
+tree.column("destinatario", width=80)
+tree.heading("manifesto_numero", text="Nº Manifesto")
+tree.heading("motorista", text="Motorista")
+tree.heading("valor_frete", text="Valor do Frete")
+tree.heading("percurso", text="Percurso")
+tree.heading("data", text="Data")
+tree.heading("observacao", text="Observação")
+tree.grid(row=3, column=0, padx=10, pady=10, sticky="nsew")
+
+# Adicione uma barra de rolagem vertical ao Treeview
+scrollbar = ttk.Scrollbar(root, orient="vertical", command=tree.yview)
+scrollbar.grid(row=1, column=1, padx=0, pady=10, sticky="ns")
+tree.configure(yscrollcommand=scrollbar.set)
+
+# Crie um botão para atualizar a lista de registros no Treeview
+atualizar_button = ttk.Button(root, text="Atualizar Registros", command=preencher_treeview)
+atualizar_button.grid(row=2, column=0, padx=10, pady=5, sticky="e")
+
+# Preencha inicialmente o Treeview com os registros do banco de dados
+preencher_treeview()
+
 # Defina o tamanho da janela principal como um tamanho de modal
-root.geometry("570x410")  # Altere as dimensões conforme necessário
+root.geometry("800x600")  # Altere as dimensões conforme necessário
 
 # Inicie a interface
 root.mainloop()
