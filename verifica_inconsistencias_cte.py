@@ -78,6 +78,7 @@ def verificar_frete_abaixo(cte,valor_minimo):
         return False
     
 def verificar_frete_acima(cte,valor_maximo):
+    
     peso = float(cte['peso'])
     frete = float(cte['frete'])
     vlr_kg = frete/peso

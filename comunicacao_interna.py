@@ -9,7 +9,8 @@ import webbrowser
 
 
 
-def imprimir_ci(ci_num,destinatario,manifesto_numero,motorista,valor_a_ser_pago,origem_destino,data,observacao=''):
+def imprimir_ci(ci_num,destinatario,manifesto_numero,motorista,valor_a_ser_pago,
+                origem_destino,data,isca_1,isca_2,observacao=''):
     empresa_nome = "SERAFIM TRANSPORTE DE CARGAS LTDA"
     empresa_endereco = "Rua : Nova Veneza,172 Cumbica – Guarulhos-SP"
     empresa_telefones = "Tel(11)2481-9121/2481-9697/2412-4886/2412-3927"

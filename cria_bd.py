@@ -3,12 +3,12 @@ import sqlite3
 # Função para criar o banco de dados e a tabela
 def criar_banco_de_dados_e_tabela():
     try:
-        conn = sqlite3.connect('banco_de_dados.db')
+        conn = sqlite3.connect('bd_norte.db')
         cursor = conn.cursor()
 
         # Cria a tabela (substitua 'sua_tabela' pelo nome desejado)
         cursor.execute('''
-            CREATE TABLE IF NOT EXISTS sua_tabela (
+            CREATE TABLE IF NOT EXISTS comunicacao_interna (
                 ci_num INTEGER PRIMARY KEY AUTOINCREMENT,
                 destinatario TEXT,
                 manifesto_numero TEXT,
@@ -16,7 +16,9 @@ def criar_banco_de_dados_e_tabela():
                 valor_frete REAL,
                 percurso TEXT,
                 data TEXT,
-                observacao TEXT
+                observacao TEXT,
+                isca_1 TEXT,
+                isca_2 TEXT
             )
         ''')
 

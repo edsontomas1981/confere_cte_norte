@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
 1 0 obj
 <<
-/F1 2 0 R /F2 4 0 R
+/F1 2 0 R /F2 4 0 R /F3 5 0 R
 >>
 endobj
 2 0 obj
@@ -25,20 +25,15 @@ endobj
 endobj
 5 0 obj
 <<
-/Contents 10 0 R /MediaBox [ 0 0 612 792 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
-/FormXob.73742f45b4221a7e49385a9f88e8990e 3 0 R
->>
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
 >>
 endobj
 6 0 obj
 <<
-/Contents 11 0 R /MediaBox [ 0 0 612 792 ] /Parent 9 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+/Contents 10 0 R /MediaBox [ 0 0 612 792 ] /Parent 9 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
+/FormXob.73742f45b4221a7e49385a9f88e8990e 3 0 R
+>>
 >> /Rotate 0 /Trans <<
 
 >> 
@@ -52,53 +47,45 @@ endobj
 endobj
 8 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20230906191350+03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20230906191350+03'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+/Author (\(anonymous\)) /CreationDate (D:20230907191814+03'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20230907191814+03'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
   /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
 endobj
 9 0 obj
 <<
-/Count 2 /Kids [ 5 0 R 6 0 R ] /Type /Pages
+/Count 1 /Kids [ 6 0 R ] /Type /Pages
 >>
 endobj
 10 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 945
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 856
 >>
 stream
-GauI5?#SFN'Sc)P($C`T_rNe#D"fRB91YmjOB0!O-3_k091Tj+ReH(1n@>ui6$TE(+NJY#*l!0M0aOA]E:Z09!5:kJllmR+BF`)hKBNM#;=.EoG;FpUiDDDaoEi8!Uq?A:c#-iuhss8]I)5$:nOH%t`^2KC9-1.EPZfQuBkZ\;YNC-G2dj8-L&qln9L=sEoh(AlS%#qc-\1F0iAR@tK2QV,FT9@Mk[j6qQNG;b/>_H@Hps8tAi,rBIG>]oh>RDK;0Y/DhMn6>ZocVA8%ijM2c2ZLK'5`#ou=bM<MF_/W!rrfguG?X#'a_"NENP_"H"5HBGJEBgudo>*qVf!M*Ic.crt"AaY\_YV#g3hENr-NkKCkiGeeY@V2C=,C,YuV^-H_Q",q=_W?Y0@.$N:[8?o^B"\P-tdKYmjfX?/r`@Jf8S4Z0m[tnu";=;j3Vg4YmG"$S#liV/j<,]H`ZU9stJKD2kE`s_%T*]T9\JaTHg.Zb:$i'N#nMJ?sR,tP+W=u3!&>s-u)NYVhHY"\[KH$C;VKpKGeB8i_H+M/j&M5f6pcHT<EknHA7m&:CGJiIR$L]P1I,ZS*)P03hVq<Jq]A5C;nthQYf#_C48n3Kd*^,l<Bjqol)Q%LOkbgDhMjGE\\Tq:@kDPaRe7=VGhle=GKVn0**SYmf8!b\H>UhTYb\C&UPRC5X/Hu#"WMB>f5A].[QfG\,*I+Sn2%R8hk,*;<OSLS)P>_,Ugd*Sgf:+e@ZoaClr[DKPEWWB&44=MkRWR',Ulsd"omfXbR^5QfnPLVRL?!:+lO9G%b!IV3p)OS=iI0Up5"F4^arEP<Ud0Z&q,T[lf?-ag_2)a+?g-_-^]c:qXD!XW^Yi+*kO5EHQkds;r!uo[Tl`162=amELT[Hn?2,,qp.C@*3PjCf`^<AFl9+6%mdSP_gV=db6MV*]bZi&Zp(t3`^UX~>endstream
-endobj
-11 0 obj
-<<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 214
->>
-stream
-GatUj\IQJ1&4Ckp`KWV"iZk^"acVGbaeGN76AP[t#/gJ!9nX'SJl]M&bj=P5UbmJ/Pm?Feduo=kfE8WU'^Q_gbH?dgPM..O.129)%U*Zc^%#0fJb<q5,4.H]MgLEb6=a4GZ)hkDCj/ck=rGC0@nhMILc@82<U1\!!Tt$-l`bLP)$O!&Rka7AG1&`pBKj9)5@?P(^OjSGkV"Wo#Lh[370~>endstream
+Gau1+9lo#B&;KZOMEUSs3aaLA[]J?@@+'.Q9sNF7^dTt%E<f^ICi[V#YP\ESf#)%P"q;W!XaTrkmRdb$1Jm[:F+B;k-8Pc1"5a)&('-USO:QdM:q)Va5](<Q)]Np(,OYI7PF9kpXh(j;6ODT\pPrX?"I4X#^+7jUpSH3'/RbX`?d(LWofTG.2&,6SL(-f4&C"E;;R>'$d.[P<rS_Z[rtHcT(#=5,WfpV61;eY?=r'&**+gqFbZDN5@1k2Fg%>gDAIp/GGf`=?L2\"]YCZo>Hl?5is%u9.^NAd1_6/L<_'$qYj05B\G&<V9brZ\0ZiaM""FP_j4ULm1$i)>CLgmmLj`aiW@"kij=$*+"gBU`=PJmRk7&?6rp8kUB3lgFZY1itt\QoXV>$YOqUG5+Q:"l#UW0nek-GJrV1P]Cb6?q#E8&R"=Dg'_oT`<@#EJ]*-,Il!RF#YmK3aCR:bj2QSWUa>'.[(2Cf0q!.+WsrsMN?M@\\8j^,Kotb_N;@iCgWR/W9Vs=l,70ICh!\c;PuT^.V%S46Fa^4IQ_/23;7E\U0;JSABe-%/*igo*Ia$4";2bGiMbGJ5/o9-/!6kFAFYn@@]_m]/rFHib=]TS6D[+J4t9j[qCNHY?Be:92);Qb_u_/+pN[Vt?*ba2mP7=5nK?:3QUPJ;(kms8Q*a:(V@l:sZjE>(*/qKl15ql*gFUTQ8d1:8?8QE)f^^%B[eX)"J\ZA*Xt$8(ZS)T^8K7blDh;L&>&L,oSe>'6Yp%\6RF`X@^#CJ@Dt^mDU*BKBfnUtn\r"Jb,7(%0Rpc5QYdhI3s4BusB5\tel1kuQmV[cmEZ8^0eP4UP=E@C_n)l;3%"86SEPKK~>endstream
 endobj
 xref
-0 12
+0 11
 0000000000 65535 f 
 0000000073 00000 n 
-0000000114 00000 n 
-0000000221 00000 n 
-0000006794 00000 n 
-0000006906 00000 n 
-0000007163 00000 n 
-0000007357 00000 n 
-0000007425 00000 n 
-0000007708 00000 n 
-0000007773 00000 n 
-0000008809 00000 n 
+0000000124 00000 n 
+0000000231 00000 n 
+0000006804 00000 n 
+0000006916 00000 n 
+0000007035 00000 n 
+0000007292 00000 n 
+0000007360 00000 n 
+0000007643 00000 n 
+0000007702 00000 n 
 trailer
 <<
 /ID 
-[<d4d47a82323027b57e147a70fcb183b6><d4d47a82323027b57e147a70fcb183b6>]
+[<9d54243f7b7f02e621ee899cd295525d><9d54243f7b7f02e621ee899cd295525d>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
 /Info 8 0 R
 /Root 7 0 R
-/Size 12
+/Size 11
 >>
 startxref
-9114
+8649
 %%EOF
