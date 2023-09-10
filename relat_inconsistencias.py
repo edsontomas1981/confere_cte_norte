@@ -9,7 +9,7 @@ import webbrowser
 
 
 
-def imprimir_relatorio(dados):
+def imprimir_relatorio(ctes,fretes,clientes):
     empresa_nome = "SERAFIM TRANSPORTE DE CARGAS LTDA"
     empresa_endereco = "Rua : Nova Veneza,172 Cumbica – Guarulhos-SP"
     empresa_telefones = "Tel(11)2481-9121/2481-9697/2412-4886/2412-3927"
@@ -66,8 +66,22 @@ def imprimir_relatorio(dados):
     # Criar um objeto Paragraph com o texto
     story.append(Paragraph(texto_com_quebras, normal_style))
     
-    for dado in dados:
-        story.append(Paragraph(f'Cte : {dado[0]} Descrição : {dado[1]} Valor : {dado[2]}', normal_style))
+    story.append(Paragraph('Diversos', h5))
+
+    for cte in ctes:
+        story.append(Paragraph(f'Cte : {cte[0]} Descrição : {cte[1]} Valor : {cte[2]}', normal_style))
+        # story.append(Paragraph(linha, normal_style))
+
+    story.append(Paragraph('Fretes', h5))
+
+    for frete in fretes:
+        story.append(Paragraph(f'Cte : {frete[0]} Descrição : {frete[1]} Valor : {frete[2]}', normal_style))
+        # story.append(Paragraph(linha, normal_style))
+
+    story.append(Paragraph('Clientes', h5))
+
+    for cliente in clientes:
+        story.append(Paragraph(f'Cte : {cliente[0]} Descrição : {cliente[1]} Valor : {cliente[2]}', normal_style))
         # story.append(Paragraph(linha, normal_style))
 
     # Gerar o PDF

@@ -25,9 +25,9 @@ def imprimir():
     ctes,ctes_1 = gera_dict(pasta)
         
     # Lógica de processamento dos dados com base nas configurações escolhidas.
-    dados = verifica_cte(ctes,dados_verificar)
+    dados,ctes,frete,clientes = verifica_cte(ctes,dados_verificar)
 
-    imprimir_relatorio(dados)
+    imprimir_relatorio(ctes,frete,clientes)
 
     # Após gerar o PDF, abrir automaticamente para impressão
     pdf_filename = "documento.pdf"
@@ -50,7 +50,7 @@ def processar_dados():
     ctes,ctes_1 = gera_dict(pasta)
         
     # Lógica de processamento dos dados com base nas configurações escolhidas.
-    dados = verifica_cte(ctes,dados_verificar)
+    dados,ctes,frete,clientes = verifica_cte(ctes,dados_verificar)
     # Limpar dados anteriores na Treeview
     for row in tree.get_children():
         tree.delete(row)
