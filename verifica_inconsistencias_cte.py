@@ -4,31 +4,30 @@ def verifica_cte(lista_ctes,dados):
     cte_erros=[]
     cte_fretes=[]
     cte_cliente=[]
-    dados=[]
+    dados_erros=[]
     for cte in lista_ctes:
         if remetente_igual_destinatario(cte):
             cte_erros.append((f'{cte["num_cte"]}',(f'Remetente e destinatário são iguais.'),cte['cnpj_dest']))
-            dados.append((f'{cte["num_cte"]}',(f'Remetente e destinatário são iguais.'),cte['cnpj_dest']))
-
+            dados_erros.append((f'{cte["num_cte"]}',(f'Remetente e destinatário são iguais.'),cte['cnpj_dest']))
         if verificar_cidade(cte['cidade_destino'], dados['filial']):
             cte_erros.append((f'{cte["num_cte"]}',(f'Não está vinculado à filial de carregamento correspondente.'),cte['cidade_destino']))
-            dados.append((f'{cte["num_cte"]}',(f'Não está vinculado à filial de carregamento correspondente.'),cte['cidade_destino']))
+            dados_erros.append((f'{cte["num_cte"]}',(f'Não está vinculado à filial de carregamento correspondente.'),cte['cidade_destino']))
         if verificar_coleta_madeirao(cte):
             cte_cliente.append(((f'{cte["num_cte"]}',(f'Cliente Madeirão verificar Ordem de Coleta. Frete: {cte["frete"]}'),cte["frete"])))
-            dados.append(((f'{cte["num_cte"]}',(f'Cliente Madeirão verificar Ordem de Coleta. Frete: {cte["frete"]}'),cte["frete"])))
+            dados_erros.append(((f'{cte["num_cte"]}',(f'Cliente Madeirão verificar Ordem de Coleta. Frete: {cte["frete"]}'),cte["frete"])))
         if verificar_mo_galvao(cte):
             cte_cliente.append(((cte["num_cte"],(f'Verificar m3 cliete M O Galvão.'),cte["m3"])))
-            dados.append((cte["num_cte"],(f'Verificar m3 cliete M O Galvão.'),cte["m3"]))
+            dados_erros.append((cte["num_cte"],(f'Verificar m3 cliete M O Galvão.'),cte["m3"]))
         if verificar_peso_volumes(cte,dados['peso_maximo']):
             cte_erros.append((cte["num_cte"],(f'''Peso volume acima do máximo.'''),round(float(cte["peso"])/float(cte["volumes"]),2)))
-            dados.append((cte["num_cte"],(f'''Peso volume acima do máximo.'''),round(float(cte["peso"])/float(cte["volumes"]),2)))
+            dados_erros.append((cte["num_cte"],(f'''Peso volume acima do máximo.'''),round(float(cte["peso"])/float(cte["volumes"]),2)))
         if verificar_frete_abaixo(cte,dados['valor_minimo']):            
             cte_fretes.append((cte["num_cte"],(f'Frete por kg abaixo do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))
-            dados.append((cte["num_cte"],(f'Frete por kg abaixo do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))
+            dados_erros.append((cte["num_cte"],(f'Frete por kg abaixo do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))
         if verificar_frete_acima(cte,dados['valor_maximo']):            
             cte_fretes.append((cte["num_cte"],(f'Frete por kg acima do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))            
-            dados.append((cte["num_cte"],(f'Frete por kg acima do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))
-    return dados,cte_erros,cte_fretes,cte_cliente
+            dados_erros.append((cte["num_cte"],(f'Frete por kg acima do normal'),round(float(cte["frete"])/float(cte["peso"]),2)))
+    return dados_erros,cte_erros,cte_fretes,cte_cliente
 
 
 def remetente_igual_destinatario(cte):

@@ -10,6 +10,7 @@ import webbrowser
 
 
 def imprimir_relatorio(ctes,fretes,clientes):
+
     empresa_nome = "SERAFIM TRANSPORTE DE CARGAS LTDA"
     empresa_endereco = "Rua : Nova Veneza,172 Cumbica – Guarulhos-SP"
     empresa_telefones = "Tel(11)2481-9121/2481-9697/2412-4886/2412-3927"
@@ -77,7 +78,6 @@ def imprimir_relatorio(ctes,fretes,clientes):
     for frete in fretes:
         story.append(Paragraph(f'Cte : {frete[0]} Descrição : {frete[1]} Valor : {frete[2]}', normal_style))
         # story.append(Paragraph(linha, normal_style))
-
     story.append(Paragraph('Clientes', h5))
 
     for cliente in clientes:
